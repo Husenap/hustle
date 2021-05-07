@@ -6,3 +6,8 @@
 HUssein's Standard Template Library Extension.
 
 This library is supposed to complement the STL by extending the functonality.
+
+
+
+## The Name
+Special thanks to [Joel](https://github.com/joerinn) for helping choose this awesome name!
