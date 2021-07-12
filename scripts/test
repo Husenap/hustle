@@ -1,7 +1,5 @@
 #! /bin/bash
 
-cmake . -B.build -Ax64
-cmake --build .build/
-cd .build/
-ctest .
-cd ..
+bash $(dirname $0)/build
+pushd .build/
+env CTEST_OUTPUT_ON_FAILURE=1 ctest . "$@"
