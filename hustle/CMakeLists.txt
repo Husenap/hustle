@@ -4,8 +4,13 @@ set(src_algorithm
     "src/hustle/algorithm/erase.ipp"
     "src/hustle/algorithm.hpp")
 
+set(src_memory
+    "src/hustle/memory/allocator.ipp"
+    "src/hustle/memory.hpp")
+
 set(src_files
-    ${src_algorithm})
+    ${src_algorithm}
+    ${src_memory})
 
 # Project
 add_library(${target_name} INTERFACE)

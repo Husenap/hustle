@@ -35,7 +35,7 @@ void test_erase_if_not(_Container&       container,
     EXPECT_EQ(container, expected);
 }
 
-TEST(hustle, erase) {
+TEST(algorithm, erase) {
     {
         std::vector<int> nums     = {1, 3, 7, 4, 5, 2, 9, 0, 5};
         std::vector<int> expected = {1, 3, 7, 4, 2, 9, 0};
@@ -102,7 +102,7 @@ TEST(hustle, erase) {
     }
 }
 
-TEST(hustle, erase_if) {
+TEST(algorithm, erase_if) {
     {
         std::vector<int> nums     = {1, 3, 7, 4, 5, 2, 9, 0, 5};
         std::vector<int> expected = {1, 3, 7, 4, 2, 9, 0};
@@ -163,7 +163,7 @@ TEST(hustle, erase_if) {
     }
 }
 
-TEST(hustle, erase_if_not) {
+TEST(algorithm, erase_if_not) {
     {
         std::vector<int> nums     = {1, 3, 7, 4, 5, 2, 9, 0, 5};
         std::vector<int> expected = {5, 5};

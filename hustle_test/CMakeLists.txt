@@ -3,8 +3,12 @@ set(target_name "hustle_test")
 set(src_algorithm
     "src/algorithm/erase.cpp")
 
+set(src_memory
+    "src/memory/allocator.cpp")
+
 set(src_files
-    ${src_algorithm})
+    ${src_algorithm}
+    ${src_memory})
 
 add_executable(${target_name} ${src_files})
 
