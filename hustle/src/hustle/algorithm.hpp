@@ -3,4 +3,4 @@
 #include <algorithm>
 #include <functional>
 
-#include "algorithm/erase.inl"
+#include "algorithm/erase.ipp"

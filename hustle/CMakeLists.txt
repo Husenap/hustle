@@ -1,7 +1,7 @@
 set(target_name "hustle")
 
 set(src_algorithm
-    "src/hustle/algorithm/erase.inl"
+    "src/hustle/algorithm/erase.ipp"
     "src/hustle/algorithm.hpp")
 
 set(src_files

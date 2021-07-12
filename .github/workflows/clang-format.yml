@@ -14,6 +14,7 @@ jobs:
       with:
         clangFormatVersion: 12
         inplace: true
+        extensions: 'cpp,hpp,ipp'
 
     - name: Add & Commit
       uses: EndBug/add-and-commit@v7.2.1
