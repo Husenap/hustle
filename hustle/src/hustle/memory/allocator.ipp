@@ -5,8 +5,6 @@ namespace allocators {
 template <class PrimaryAlloc, class FallbackAlloc>
 class fallback : private PrimaryAlloc, private FallbackAlloc {
 public:
-
-
     virtual ~fallback() = default;
     char* allocate(std::size_t n, std::align_val_t a) {
         char* p = PrimaryAlloc::allocate(n, a);
