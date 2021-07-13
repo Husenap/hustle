@@ -22,5 +22,4 @@ jobs:
         default_author: github_actions
         pull_strategy: NO-PULL
         message: "Formatted files using clang-format"
-      env:
-        GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        github_token: ${{ secrets.PERSONAL_TOKEN }}
