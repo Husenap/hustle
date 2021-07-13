@@ -144,7 +144,7 @@ public:
 
     template <typename U>
     allocator(const allocator<U>& other)
-        : Base(other){}
+        : Base(other) {}
 
     template <typename U>
     struct rebind {
