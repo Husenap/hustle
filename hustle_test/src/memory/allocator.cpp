@@ -1,26 +1,31 @@
+#include <array>
 #include <vector>
 
 #include <gtest/gtest.h>
 #include <hustle/memory.hpp>
 
-template <typename T>
-using myVector = std::vector<T, hustle::allocator<T>>;
-
-TEST(memory, allocator) {
+template <template <class T> class Alloc>
+void RunTheTest() {
     struct Data {
         float a, b, c, d;
         int   e, f, g;
         bool  h;
     };
-    myVector<Data> nums;
-    std::cout << nums.get_allocator().get_memory_usage();
-    for (int i = 0; i < 1000; ++i) {
-        nums.push_back(Data());
+    std::vector<Data, Alloc<Data>> nums;
+
+    for (int n = 0; n < 1000; ++n) {
+        for (int i = 0; i < 100; ++i) {
+            nums.push_back(Data());
+        }
+        nums.clear();
+        nums.shrink_to_fit();
     }
-    nums.clear();
-    for (int i = 0; i < 1000; ++i) {
-        nums.push_back(Data());
-    }
-    std::cout << nums.get_allocator().get_memory_usage();
-    nums.clear();
+}
+
+TEST(memory, custom_allocator) {
+    RunTheTest<hustle::allocator>();
+}
+
+TEST(memory, std_allocator) {
+    RunTheTest<std::allocator>();
 }
