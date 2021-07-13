@@ -72,9 +72,9 @@ public:
 template <class ParentAlloc, std::size_t MinSize, std::size_t MaxSize>
 class freelist : private ParentAlloc {
     struct Node {
-        Node* next;
+        Node* next = nullptr;
     };
-    Node* mRoot;
+    Node* mRoot = nullptr;
 
 public:
     char* allocate(std::size_t n, std::align_val_t a) {
@@ -144,7 +144,7 @@ public:
 
     template <typename U>
     allocator(const allocator<U>& other)
-        : Base(other){};
+        : Base(other){}
 
     template <typename U>
     struct rebind {

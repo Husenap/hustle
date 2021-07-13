@@ -44,7 +44,6 @@ TEST(algorithm, erase) {
     {
         std::string text     = "Hello, World!";
         std::string expected = "Hell, Wrld!";
-        auto        it       = text.begin();
         test_erase(text, expected, 'o');
     }
     {
