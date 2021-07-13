@@ -53,49 +53,6 @@ TEST(algorithm, erase) {
         test_erase(nums, expected, 5);
     }
     {
-        std::map<int, std::string> values   = {{0, "a"}, {1, "b"}, {2, "c"}};
-        std::map<int, std::string> expected = {{0, "a"}, {2, "c"}};
-        test_erase(values, expected, 1);
-    }
-    {
-        std::set<int> values   = {1, 2, 3, 4};
-        std::set<int> expected = {1, 2, 4};
-        test_erase(values, expected, 3);
-    }
-    {
-        std::multimap<int, std::string> values = {{0, "a"}, {1, "b"}, {2, "c"}};
-        std::multimap<int, std::string> expected = {{0, "a"}, {2, "c"}};
-        test_erase(values, expected, 1);
-    }
-    {
-        std::multiset<int> values   = {1, 2, 3, 4};
-        std::multiset<int> expected = {1, 2, 4};
-        test_erase(values, expected, 3);
-    }
-    {
-        std::unordered_map<int, std::string> values = {
-            {0, "a"}, {1, "b"}, {2, "c"}};
-        std::unordered_map<int, std::string> expected = {{0, "a"}, {2, "c"}};
-        test_erase(values, expected, 1);
-    }
-    {
-        std::unordered_set<int> values   = {1, 2, 3, 4};
-        std::unordered_set<int> expected = {1, 2, 4};
-        test_erase(values, expected, 3);
-    }
-    {
-        std::unordered_multimap<int, std::string> values = {
-            {0, "a"}, {1, "b"}, {2, "c"}};
-        std::unordered_multimap<int, std::string> expected = {{0, "a"},
-                                                              {2, "c"}};
-        test_erase(values, expected, 1);
-    }
-    {
-        std::unordered_multiset<int> values   = {1, 2, 3, 4};
-        std::unordered_multiset<int> expected = {1, 2, 4};
-        test_erase(values, expected, 3);
-    }
-    {
         std::deque<int> values   = {1, 2, 3, 4};
         std::deque<int> expected = {1, 2, 4};
         test_erase(values, expected, 3);
