@@ -23,4 +23,4 @@ jobs:
         pull_strategy: NO-PULL
         message: "Formatted files using clang-format"
       env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
