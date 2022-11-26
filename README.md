@@ -27,4 +27,4 @@ int main() {
 
 
 ## The Name
-Special thanks to [Joel](https://github.com/joerinn) for helping choose this awesome name!
+Special thanks to [Joel](https://github.com/boenkyo) for helping choose this awesome name!
